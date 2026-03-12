@@ -7,29 +7,17 @@
     <style>
         body { font-family: Arial, sans-serif; }
         h1 { text-align: center; }
-        ul { list-style-type: none; }
-        li { margin: 10px 0; }
+        .game-list { list-style-type: none; padding: 0; }
+        .game-item { margin: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Game Portal</h1>
-    <h2>List of Games</h2>
-    <ul>
-        <li><a href="/games/game1/index.html">Game 1</a></li>
-        <li><a href="/games/game2/index.html">Game 2</a></li>
-        <li><a href="/games/game3/index.html">Game 3</a></li>
-        <li><a href="/games/game4/index.html">Game 4</a></li>
-        <li><a href="/games/game5/index.html">Game 5</a></li>
-        <!-- Add more games here as needed -->
-    </ul>
-    <h2>XML Files</h2>
-    <ul>
-        <li><a href="/xml/game1.xml">Game 1 Data</a></li>
-        <li><a href="/xml/game2.xml">Game 2 Data</a></li>
-        <li><a href="/xml/game3.xml">Game 3 Data</a></li>
-        <li><a href="/xml/game4.xml">Game 4 Data</a></li>
-        <li><a href="/xml/game5.xml">Game 5 Data</a></li>
-        <!-- Add more XML files here as needed -->
+    <h1>Game Portal</h1>
+    <ul class="game-list">
+        <li class="game-item"><a href="path_to_game1_directory">Game 1</a> - <a href="path_to_game1_file.xml">Download XML</a></li>
+        <li class="game-item"><a href="path_to_game2_directory">Game 2</a> - <a href="path_to_game2_file.xml">Download XML</a></li>
+        <li class="game-item"><a href="path_to_game3_directory">Game 3</a> - <a href="path_to_game3_file.xml">Download XML</a></li>
+        <!-- Additional games go here -->
     </ul>
 </body>
 </html>
