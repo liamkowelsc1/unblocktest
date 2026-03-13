@@ -76,9 +76,11 @@
         function loadGame(path) {
             document.getElementById('gameFrame').src = path;
         }
-        window.addEventListener("beforeunload", ev => {
-        ev.preventDefault();
+        window.onload = () => {
+            window.addEventListener("beforeunload", ev => {
+            ev.preventDefault();
         });
+        }
     </script>
 </body>
 </html>
