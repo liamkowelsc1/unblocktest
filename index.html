@@ -3,43 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Index</title>
+    <title>Game Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #games {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .game {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .game:hover {
+            background-color: #0056b3;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-    <h1>Game Index</h1>
-    <ul>
-        <li><a href="a-game-black-hole/index.html">a-game-black-hole</a></li>
-        <li><a href="bad-parenting/index.html">bad-parenting</a></li>
-        <li><a href="bart-blast/index.html">bart-blast</a></li>
-        <li><a href="btd6/index.html">btd6</a></li>
-        <li><a href="buckshot-roulette/index.html">buckshot-roulette</a></li>
-        <li><a href="cluster-rush/index.html">cluster-rush</a></li>
-        <li><a href="color-pencil-run/index.html">color-pencil-run</a></li>
-        <li><a href="coreball/index.html">coreball</a></li>
-        <li><a href="crazycattle3d/index.html">crazycattle3d</a></li>
-        <li><a href="crossy-road/index.html">crossy-road</a></li>
-        <li><a href="cubes2048/index.html">cubes2048</a></li>
-        <li><a href="driven-wild/index.html">driven-wild</a></li>
-        <li><a href="emu/index.html">emu</a></li>
-        <li><a href="escape-road-city-2/index.html">escape-road-city-2</a></li>
-        <li><a href="escaperoad2/index.html">escaperoad2</a></li>
-        <li><a href="gdlite/index.html">gdlite</a></li>
-        <li><a href="jetpack-joyride/index.html">jetpack-joyride</a></li>
-        <li><a href="melon-playground/index.html">melon-playground</a></li>
-        <li><a href="monster-tracks/index.html">monster-tracks</a></li>
-        <li><a href="nazi-zombies-portable/index.html">nazi-zombies-portable</a></li>
-        <li><a href="nova-craft/index.html">nova-craft</a></li>
-        <li><a href="ragdoll-hit/index.html">ragdoll-hit</a></li>
-        <li><a href="retrobowlcollege/index.html">retrobowlcollege</a></li>
-        <li><a href="shapezio/index.html">shapezio</a></li>
-        <li><a href="shredsauce/index.html">shredsauce</a></li>
-        <li><a href="slope/index.html">slope</a></li>
-        <li><a href="stickman-hook/index.html">stickman-hook</a></li>
-        <li><a href="swf/index.html">swf</a></li>
-        <li><a href="temple-run-2/index.html">temple-run-2</a></li>
-        <li><a href="turbo-moto-racer/index.html">turbo-moto-racer</a></li>
-        <li><a href="waterworks/index.html">waterworks</a></li>
-        <li><a href="winter-clash-3d/index.html">winter-clash-3d</a></li>
-    </ul>
+    <h1>Game Portal</h1>
+    <div id="games">
+        <div class="game" onclick="loadGame('a-game-black-hole/index.html')">a-game-black-hole</div>
+        <div class="game" onclick="loadGame('bad-parenting/index.html')">bad-parenting</div>
+        <div class="game" onclick="loadGame('bart-blast/index.html')">bart-blast</div>
+        <div class="game" onclick="loadGame('btd6/index.html')">btd6</div>
+        <div class="game" onclick="loadGame('buckshot-roulette/index.html')">buckshot-roulette</div>
+        <div class="game" onclick="loadGame('cluster-rush/index.html')">cluster-rush</div>
+        <div class="game" onclick="loadGame('color-pencil-run/index.html')">color-pencil-run</div>
+        <div class="game" onclick="loadGame('coreball/index.html')">coreball</div>
+        <div class="game" onclick="loadGame('crazycattle3d/index.html')">crazycattle3d</div>
+        <div class="game" onclick="loadGame('crossy-road/index.html')">crossy-road</div>
+        <div class="game" onclick="loadGame('cubes2048/index.html')">cubes2048</div>
+        <div class="game" onclick="loadGame('driven-wild/index.html')">driven-wild</div>
+        <div class="game" onclick="loadGame('emu/index.html')">emu</div>
+        <div class="game" onclick="loadGame('escape-road-city-2/index.html')">escape-road-city-2</div>
+        <div class="game" onclick="loadGame('escaperoad2/index.html')">escaperoad2</div>
+        <div class="game" onclick="loadGame('gdlite/index.html')">gdlite</div>
+        <div class="game" onclick="loadGame('jetpack-joyride/index.html')">jetpack-joyride</div>
+        <div class="game" onclick="loadGame('melon-playground/index.html')">melon-playground</div>
+        <div class="game" onclick="loadGame('monster-tracks/index.html')">monster-tracks</div>
+        <div class="game" onclick="loadGame('nazi-zombies-portable/index.html')">nazi-zombies-portable</div>
+        <div class="game" onclick="loadGame('nova-craft/index.html')">nova-craft</div>
+        <div class="game" onclick="loadGame('ragdoll-hit/index.html')">ragdoll-hit</div>
+        <div class="game" onclick="loadGame('retrobowlcollege/index.html')">retrobowlcollege</div>
+        <div class="game" onclick="loadGame('shapezio/index.html')">shapezio</div>
+        <div class="game" onclick="loadGame('shredsauce/index.html')">shredsauce</div>
+        <div class="game" onclick="loadGame('slope/index.html')">slope</div>
+        <div class="game" onclick="loadGame('stickman-hook/index.html')">stickman-hook</div>
+        <div class="game" onclick="loadGame('swf/index.html')">swf</div>
+        <div class="game" onclick="loadGame('temple-run-2/index.html')">temple-run-2</div>
+        <div class="game" onclick="loadGame('turbo-moto-racer/index.html')">turbo-moto-racer</div>
+        <div class="game" onclick="loadGame('waterworks/index.html')">waterworks</div>
+        <div class="game" onclick="loadGame('winter-clash-3d/index.html')">winter-clash-3d</div>
+    </div>
+    <iframe id="gameFrame" src=""></iframe>
+    <script>
+        function loadGame(path) {
+            document.getElementById('gameFrame').src = path;
+        }
+    </script>
 </body>
 </html>
